@@ -1,0 +1,84 @@
+{
+  "expo": {
+    "name": "Co Rider",
+    "slug": "corider",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/adaptive-icon.png",
+    "scheme": "corider",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.coriders.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.coriders.app",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "versionCode": 1,
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.coriders.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "server",
+      "favicon": "./assets/images/adaptive-icon.png",
+      "startUrl": "/"
+    },
+    "splash": {
+      "image": "./assets/images/splash-icon-light.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "$(PRODUCT_NAME) app require access to you photo to enable upload reports",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to snap the report"
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+      "expo-router",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "aea3c94b-5054-42c8-9f08-9a999c96b618"
+      },
+      "apiUrl": {
+        "development": "http://192.168.0.102:3000",
+        "staging": "https://app.coriders.com",
+        "production": "https://app.coriders.com"
+      },
+      "GEOAPI": "0d2310b2c69149c3a4b1be11fcb0c2b6",
+      "env": "development",
+      "router": {
+        "origin": false
+      }
+    }
+  }
+}
